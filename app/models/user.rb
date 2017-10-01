@@ -7,7 +7,11 @@ class User < ApplicationRecord
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
-
+  validates :username, length: { maximum: 40 }
+  validates :username, format: { with: /[a-zA-Z0-9_]/,
+                                 message: "только латинские буквы, цифры, и знак _" }
+  validates :email, format: { with: /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b/,
+                              message: "некорректный адрес" }
 
   attr_accessor :password
 
@@ -31,7 +35,7 @@ class User < ApplicationRecord
     user = find_by(email: email)
 
     if user.present? && user.password_hash == User.hash_to_string(
-      OpenSSL::PKCS5.pbkdf2_hmac(password, user.password_salt,ITERATIONS,
+      OpenSSL::PKCS5.pbkdf2_hmac(password, user.password_salt, ITERATIONS,
                                  DIGEST.length, DIGEST))
       user
     else
