@@ -22,7 +22,7 @@ class User < ApplicationRecord
   before_save :encrypt_password
 
   def username_downcase
-    self.username = self.username.downcase
+    self.username = self.username.downcase unless  self.username.nil?
   end
 
   def encrypt_password
