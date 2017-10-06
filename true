@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20171002210345_add_index.rb
