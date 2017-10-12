@@ -36,8 +36,15 @@
   </div>
 </div>
 
+
+
 <div class="column-3-4">
   <div class="user-questions buffer-both">
+    <div>
+      <%= Russian.p(@questions.count, "Задан", "Задано", "Задано") %>
+      <%= @questions.count %>
+      <%= Russian.p(@questions.count, "вопрос", "вопроса", "вопросов") %>.
+    </div>
     <div class="questions-list">
       <% @questions.each do |question| %>
           <%= render partial: 'questions/question', object: question %>
@@ -45,3 +52,4 @@
     </div>
   </div>
 </div>
+
