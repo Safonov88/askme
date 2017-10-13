@@ -45,9 +45,9 @@
 <div class="column-3-4">
   <div class="user-questions buffer-both">
     <div>
-      <%= Russian.p(@questions.count, "Задан", "Задано", "Задано") %>
+      <%= sklonenie(@questions.count, "Задан", "Задано", "Задано") %>
       <%= @questions.count %>
-      <%= Russian.p(@questions.count, "вопрос", "вопроса", "вопросов") %>.
+      <%= sklonenie(@questions.count, "вопрос", "вопроса", "вопросов") %>.
     </div>
     <div class="questions-list">
       <% @questions.each do |question| %>
