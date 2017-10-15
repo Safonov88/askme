@@ -22,7 +22,7 @@
  *= require grid
  *= require button
  *= require form
- *
+ *= require sessions
  * Подключаем стили, специфичные для конкретных view-файлов
  *= require layout
  *= require users
