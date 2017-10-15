@@ -62,7 +62,7 @@
 
     <% end %>
     <div class="column-1-4-right">
-      Удалить профиль => 
+      Удалить профиль =>
     <%= link_to fa_icon('trash-o'), user_path(@user),
                 method: :delete, data: { confirm: 'Точно удалить аккаунт?' } if current_user == @user %>
     </div>
