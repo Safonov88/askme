@@ -17,7 +17,7 @@
       <%= l(question.created_at, format: :short) %>
       <div class="question-date">
         <%= link_to "@#{question.author.username}",
-            user_path(question.author) unless question.author_id == nil %>
+                    user_path(question.author) unless question.author_id == nil %>
       </div>
     </div>
   </div>
