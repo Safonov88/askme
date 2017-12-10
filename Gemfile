@@ -13,7 +13,7 @@ gem 'rails', '~> 5.1.4'
 gem 'jquery-rails'
 gem 'uglifier'
 gem 'rails_12factor'
-
+gem 'recaptcha', require: 'recaptcha/rails'
 group :production do
   gem 'pg'
 end
