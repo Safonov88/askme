@@ -11,7 +11,7 @@
 
 
 1. Склонировать репозиторий на локальную машину командой 
-``` git clone https://github.com/Safonov88/bbq ```
+``` git clone https://github.com/Safonov88/askme ```
 
 2. Зайти в консоли в папку с приложением и выполнить команду 
 ``` bundle exec rails db:migrate ```
