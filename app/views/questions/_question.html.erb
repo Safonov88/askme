@@ -13,6 +13,11 @@
         </div>
     <% end %>
 
+    <div class="hashtag text-center">
+      <%= hash_tag(question.text) %>
+      <%= hash_tag(question.answer) %>
+    </div>
+
     <div class="question-date">
       <%= l(question.created_at, format: :short) %>
       <div class="question-date">
